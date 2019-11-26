@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ndr_stats (0.1.0)
+    ndr_stats (0.2.0)
       dogstatsd-ruby (~> 4.5)
 
 GEM
