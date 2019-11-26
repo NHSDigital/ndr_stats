@@ -1,43 +1,77 @@
 # NdrStats
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ndr_stats`. To experiment with that code, run `bin/console` for an interactive prompt.
+Provides pain-free setup of stats collecting to Ruby/Rails projects.
 
-TODO: Delete this and the text above, and describe your gem
+## Assumed Architecture
 
-## Installation
+This library currently sends UDP packets to the configured receiver using the statsd format (with tagging addition).
 
-Add this line to your application's Gemfile:
+The conventional way we set this up is as follows:
 
-```ruby
-gem 'ndr_stats'
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ndr_stats
++-------------+   UDP   +----------------------------+
+| Ruby client |  ---->  | Prometheus Statsd Exporter |
++-------------+         +----------------------------+
+                                     |
+                                     | scraped by
+                                     V
+  +---------+            +-----------------------+
+  | Grafana |    <----   | Central Prometheus DB |
+  +---------+            +-----------------------+
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+### Ruby
+
+First, set up the library to point at a Statsd receiver:
+
+```ruby
+NdrStats.configure(host: 'localhost', port: 9125)
+```
+
+Then use as follows:
+
+```ruby
+# increment counts of things:
+NdrStats.count(:issues)
+NdrStats.count(:issues, 3)
+
+# time things:
+NdrStats.time(:paint_drying) { paint.dry! }
+NdrStats.timing(:web_request, 100) # milliseconds
+
+# set counts of things:
+NdrStats.gauge(:population, 8_000_000_000)
+```
+
+All methods additionally accept tags, sent using the DataDog format extension:
+
+```ruby
+NdrStats.count(:issues, +1, type: :closed)
+NdrStats.count(:issues, -1, type: :open)
+```
+
+### Rails
+
+When used in a Rails application, you can store configuration in `config/stats.yml`.
+
+```yaml
+---
+host: localhost
+port: 9125
+```
+
+It's additionally possible to specify `system` and `stack`, which will be automatically added as tags on all stats.
+If the host application's enclosing module responds to the `flavour` or `stack` methods, these will be used if not otherwise specified.
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git co
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ndr_stats. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Code of Conduct
 
-Everyone interacting in the NdrStats project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/ndr_stats/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the NdrStats project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the `CODE_OF_CONDUCT.md`.
