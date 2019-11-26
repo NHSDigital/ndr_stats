@@ -1,5 +1,5 @@
 /.bundle/
-/.yardoc
+/.rubocop-https*
 /_yardoc/
 /coverage/
 /doc/
