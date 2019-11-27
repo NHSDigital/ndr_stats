@@ -11,7 +11,8 @@ module NdrStats
                reject { |_, value| value.blank? }
 
       # Try and derive system/stack from applications that expose it:
-      host_module = Rails.application.class.parent
+      app_class = Rails.application.class
+      host_module = app_class.try(:module_parent) || app_class.parent
       config[:system] ||= host_module.try(:flavour) || host_module.name.downcase
       config[:stack] ||= host_module.try(:stack) || Rails.env
 
