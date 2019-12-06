@@ -26,6 +26,16 @@ module NdrStats
     attr_accessor :adaptor
 
     # Register some tags to update the :ping counter periodically.
+    #
+    #   # basic tagged ping:
+    #   NdrStats.ping(type: 'webapp')
+
+    #   # supply additional tags:
+    #   NdrStats.ping(type: 'daemon', name: 'batch importer')
+
+    #   # set a custom frequency (defaults to every minute):
+    #   NdrStats.ping(type: 'sloth', every: 3.hours)
+    #
     def ping(**args)
       Ping.register(**args)
     end

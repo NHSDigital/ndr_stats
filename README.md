@@ -20,7 +20,7 @@ The conventional way we set this up is as follows:
   +---------+            +-----------------------+
 ```
 
-## Usage
+## Setup
 
 ### Ruby
 
@@ -30,7 +30,22 @@ First, set up the library to point at a Statsd receiver:
 NdrStats.configure(host: 'localhost', port: 9125)
 ```
 
-Then use as follows:
+### Rails
+
+When used in a Rails application, you can store configuration in `config/stats.yml`.
+
+```yaml
+---
+host: localhost
+port: 9125
+```
+
+It's additionally possible to specify `system` and `stack`, which will be automatically added as tags on all stats.
+If the host application's enclosing module responds to the `flavour` or `stack` methods, these will be used if not otherwise specified.
+
+## Usage
+
+Basic usage is as follows:
 
 ```ruby
 # increment counts of things:
@@ -52,18 +67,28 @@ NdrStats.count(:issues, +1, type: :closed)
 NdrStats.count(:issues, -1, type: :open)
 ```
 
-### Rails
+### Pings
 
-When used in a Rails application, you can store configuration in `config/stats.yml`.
+You can register background pings (for process status checks) using `NdrStats.ping`,
+by supplying tags. These will also use any default tags you have configured.
 
-```yaml
----
-host: localhost
-port: 9125
+Metrics:
+* `ndr_stats_initial_ping` is incremented once, initially
+* `ndr_stats_ping` is then incremented periodically, according to the frequency
+* `ndr_stats_final_ping` is incremented once on exit, if it's possible to do so.
+
+```ruby
+# basic tagged ping:
+NdrStats.ping(type: 'webapp')
+
+# supply additional tags:
+NdrStats.ping(type: 'daemon', name: 'batch importer')
+
+# set a custom frequency (defaults to every minute):
+NdrStats.ping(type: 'sloth', every: 3.hours)
 ```
 
-It's additionally possible to specify `system` and `stack`, which will be automatically added as tags on all stats.
-If the host application's enclosing module responds to the `flavour` or `stack` methods, these will be used if not otherwise specified.
+See `NdrStats::Ping` for more details.
 
 ## Development
 

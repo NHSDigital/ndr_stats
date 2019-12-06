@@ -1,6 +1,9 @@
 module NdrStats
   # Ping instances make regular increments to a :ping counter,
   # as a means of checking that a progress is up.
+  #
+  # They can be started and stopped, as well as registered and removed
+  # centrally. Generally, use via `NdrStats.ping` is recommended.
   class Ping
     # Maintain a list of started instances, to avoid accidentally
     # starting duplicates.
