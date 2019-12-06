@@ -34,6 +34,11 @@ module NdrStats
       assert_match(/missing keyword: type/, exception.message)
     end
 
+    def test_interval_should_be_configurable
+      assert_equal 60, Ping.new(type: 'default').interval
+      assert_equal 3, Ping.new(type: 'rapid', every: 3).interval
+    end
+
     def test_should_not_be_running_initially
       Ping.any_instance.expects(:start).never
       ping = Ping.new(type: 'test')

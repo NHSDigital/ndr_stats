@@ -33,10 +33,10 @@ module NdrStats
     # trigger final pings, if possible:
     at_exit { Ping.remove_all }
 
-    attr_reader :frequency, :tags
+    attr_reader :interval, :tags
 
     def initialize(every: 60, type:, **tags)
-      @frequency = every
+      @interval = every
       @tags = tags.merge!(type: type)
 
       @thread = nil
@@ -68,7 +68,7 @@ module NdrStats
     def ping_forever
       loop do
         running_ping
-        sleep frequency
+        sleep interval
       end
     end
 
