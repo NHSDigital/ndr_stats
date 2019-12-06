@@ -1,6 +1,7 @@
 require 'ndr_stats/version'
 
 require 'ndr_stats/config'
+require 'ndr_stats/ping'
 require 'ndr_stats/railtie' if defined?(Rails)
 require 'ndr_stats/stats'
 
@@ -23,5 +24,10 @@ module NdrStats
 
   class << self
     attr_accessor :adaptor
+
+    # Register some tags to update the :ping counter periodically.
+    def ping(**args)
+      Ping.register(**args)
+    end
   end
 end
