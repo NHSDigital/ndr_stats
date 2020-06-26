@@ -1,4 +1,4 @@
-# NdrStats
+# NdrStats [![Build Status](https://travis-ci.org/PublicHealthEngland/ndr_stats.svg?branch=master)](https://travis-ci.org/PublicHealthEngland/ndr_stats)
 
 Provides pain-free setup of stats collecting to Ruby/Rails projects.
 
