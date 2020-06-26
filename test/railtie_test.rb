@@ -32,7 +32,7 @@ class RailtieTest < Minitest::Test
   private
 
   def assert_runner_output(expected_output, command)
-    output, _status = Open3.capture2e('bundle', 'exec', 'rails', 'runner', command, chdir: 'test/dummy')
+    output, _status = Open3.capture2e('bundle', 'exec', 'rails', 'runner', command, '-e', 'development', chdir: 'test/dummy')
     assert_equal expected_output, output.strip
   end
 
