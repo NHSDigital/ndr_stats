@@ -1,0 +1,242 @@
+---
+file safety:
+  ".gitignore":
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  ".rubocop.yml":
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: fc8003c597890c4b6f7c4aea3a34bd06b3c1ec6e
+  ".travis.yml":
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 39743de484c34d33547ab9e47645542d87138189
+  CHANGELOG.md:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 0be7f37d7b65df4f465133015399f37e316169c2
+  CODE_OF_CONDUCT.md:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 43fe7d83291cd9f68a530f615c5b325ea1096366
+  Gemfile:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: e3307b8b5ace6d968887421768e45c1c9024eb04
+  Gemfile.lock:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 0be7f37d7b65df4f465133015399f37e316169c2
+  README.md:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: e1342a484f0eb0c43c44e43578648b747785e75c
+  Rakefile:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: e3307b8b5ace6d968887421768e45c1c9024eb04
+  bin/console:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 43fe7d83291cd9f68a530f615c5b325ea1096366
+  bin/setup:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 43fe7d83291cd9f68a530f615c5b325ea1096366
+  lib/ndr_stats.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 5f8db00671db37f8a461d81238a7222d4cb4b04d
+  lib/ndr_stats/config.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: f63534ea9c2a0616bc598db4b49805495f3d8581
+  lib/ndr_stats/ping.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: c98ff89227a1855b731c127922b86abe9d489cb8
+  lib/ndr_stats/railtie.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 3d1d490572a331ad5acadb3189b708e5dc9e1f0e
+  lib/ndr_stats/stats.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: f63534ea9c2a0616bc598db4b49805495f3d8581
+  lib/ndr_stats/version.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 0be7f37d7b65df4f465133015399f37e316169c2
+  ndr_stats.gemspec:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/.ruby-version:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/README.md:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/Rakefile:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/app/assets/config/manifest.js:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/app/assets/stylesheets/application.css:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/app/controllers/application_controller.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/app/helpers/application_helper.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/app/jobs/application_job.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/app/views/layouts/application.html.erb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/bin/rails:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/bin/rake:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/bin/setup:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config.ru:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/application.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/boot.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/credentials.yml.enc:
+    comments: just contains a secret_key_base for testing
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/environment.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/environments/development.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/environments/production.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/environments/test.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/application_controller_renderer.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/backtrace_silencers.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/content_security_policy.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/cookies_serializer.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/filter_parameter_logging.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/inflections.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/mime_types.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/initializers/wrap_parameters.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/locales/en.yml:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/master.key:
+    comments: Purely to allow tests to work. Protects no real secrets.
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/config/routes.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/404.html:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/422.html:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/500.html:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/apple-touch-icon-precomposed.png:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/apple-touch-icon.png:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/favicon.ico:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/dummy/public/robots.txt:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+  test/ndr_stats/ping_test.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: c98ff89227a1855b731c127922b86abe9d489cb8
+  test/ndr_stats_test.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: f63534ea9c2a0616bc598db4b49805495f3d8581
+  test/railtie_test.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: e52ce3caa8d48115f63a71c1ae1bf5757ecfa129
+  test/test_helper.rb:
+    comments: 
+    reviewed_by: josh.pencheon
+    safe_revision: f63534ea9c2a0616bc598db4b49805495f3d8581
