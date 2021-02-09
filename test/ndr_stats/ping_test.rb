@@ -31,7 +31,7 @@ module NdrStats
       assert_equal tags, ping.tags
 
       exception = assert_raises(ArgumentError) { Ping.new(volume: 'low') }
-      assert_match(/missing keyword: type/, exception.message)
+      assert_match(/missing keyword: :?type/, exception.message)
     end
 
     def test_interval_should_be_configurable
