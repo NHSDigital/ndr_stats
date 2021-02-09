@@ -32,7 +32,11 @@ NdrStats.configure(host: 'localhost', port: 9125)
 
 ### Rails
 
-When used in a Rails application, you can store configuration in `config/stats.yml`.
+When used in a Rails application, you have the option to auto-configure `NdrStats`.
+
+#### File-based
+
+Add configuration in `config/stats.yml`:
 
 ```yaml
 ---
@@ -40,8 +44,16 @@ host: localhost
 port: 9125
 ```
 
+#### Environment config
+
+Alternatively, you can use environment variables `NDR_STATS_{HOST,PORT,SYSTEM,STACK}` to provide config parameters.
+Environment variables override any file-based configuration that's also found.
+
+#### System / Stack
+
 It's additionally possible to specify `system` and `stack`, which will be automatically added as tags on all stats.
 If the host application's enclosing module responds to the `flavour` or `stack` methods, these will be used if not otherwise specified.
+
 
 ## Usage
 

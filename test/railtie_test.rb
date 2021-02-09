@@ -29,6 +29,22 @@ class RailtieTest < Minitest::Test
     end
   end
 
+  def test_should_work_with_environment_variables
+    with_env('NDR_STATS_HOST' => 'localhost', 'NDR_STATS_PORT' => '9125') do
+      assert_runner_output 'true', 'puts NdrStats.configured?.inspect'
+      assert_runner_output '["stack:development", "system:dummy"]', 'puts NdrStats.adaptor.tags.sort.inspect'
+    end
+  end
+
+  def test_should_work_with_environment_overrides
+    with_config(full_config) do
+      with_env('NDR_STATS_SYSTEM' => 'override') do
+        assert_runner_output 'true', 'puts NdrStats.configured?.inspect'
+        assert_runner_output '["stack:staging", "system:override"]', 'puts NdrStats.adaptor.tags.sort.inspect'
+      end
+    end
+  end
+
   private
 
   def assert_runner_output(expected_output, command)
@@ -45,6 +61,21 @@ class RailtieTest < Minitest::Test
     yield
   ensure
     FileUtils.rm(path)
+  end
+
+  def with_env(env)
+    old_vals = {}
+
+    env.each do |key, value|
+      old_vals[key] = ENV[key]
+      ENV[key] = value
+    end
+
+    yield
+  ensure
+    old_vals.each do |key, value|
+      ENV[key] = value
+    end
   end
 
   def with_initializer(flavour:, stack:, &block)
