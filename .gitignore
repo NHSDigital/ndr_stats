@@ -1,6 +1,6 @@
 /.bundle/
 /.rubocop-https*
-/.Gemfile.lock
+/Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
