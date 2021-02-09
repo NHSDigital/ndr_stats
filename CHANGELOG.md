@@ -1,5 +1,6 @@
 ## [Unreleased]
-*no unreleased changes*
+### Added
+* When using Rails, add the ability to configure using environment variables (#5)
 
 ## 0.2.1 / 2019-11-27
 ### Fixed
