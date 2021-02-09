@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'mocha'
-  spec.add_development_dependency 'ndr_dev_support'
+  spec.add_development_dependency 'ndr_dev_support', '>= 5.10'
   spec.add_development_dependency 'rails'
   spec.add_development_dependency 'rake', '>= 12.3.3'
 end
