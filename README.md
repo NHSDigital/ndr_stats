@@ -1,4 +1,4 @@
-# NdrStats [![Build Status](https://github.com/publichealthengland/ndr_stats/workflows/Test/badge.svg)](https://github.com/publichealthengland/ndr_stats/actions?query=workflow%3Atest) [![Gem Version](https://badge.fury.io/rb/ndr_stats.svg)](https://badge.fury.io/rb/ndr_stats)
+# NdrStats [![Build Status](https://github.com/NHSDigital/ndr_stats/workflows/Test/badge.svg)](https://github.com/NHSDigital/ndr_stats/actions?query=workflow%3Atest) [![Gem Version](https://badge.fury.io/rb/ndr_stats.svg)](https://badge.fury.io/rb/ndr_stats)
 
 Provides pain-free setup of stats collecting to Ruby/Rails projects.
 
