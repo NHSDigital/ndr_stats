@@ -49,6 +49,10 @@ class RailtieTest < Minitest::Test
 
   def assert_runner_output(expected_output, command)
     output, _status = Open3.capture2e('bundle', 'exec', 'rails', 'runner', command, '-e', 'development', chdir: 'test/dummy')
+    # Ignore Rails 7.0 deprecation warnings
+    ignore = /activesupport-7.0.*no longer be part of the default gems.*|add .* to your Gemfile/
+    output = output.split("\n").grep_v(ignore).join("\n")
+
     assert_equal expected_output, output.strip
   end
 
