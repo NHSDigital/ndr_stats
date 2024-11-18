@@ -22,7 +22,7 @@ Bundler.require(*Rails.groups)
 module Dummy
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults Rails.version.match(/[0-9]*[.][0-9]*/).to_s # e.g. 7.2
 
     # Configuration for the application, engines, and railties goes here.
     #
