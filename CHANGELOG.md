@@ -1,4 +1,7 @@
 ## [Unreleased]
+* no unreleased changes*
+
+## 0.2.2 / 2024-11-19
 ### Added
 * When using Rails, add the ability to configure using environment variables (#5)
 * Support Ruby 3.2. Drop support for Ruby 2.7, Rails 6.0
