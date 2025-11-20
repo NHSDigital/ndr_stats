@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'dogstatsd-ruby', '~> 4.5'
+  spec.add_dependency 'dogstatsd-ruby', '>= 4.5', '< 6.0'
 
   # We list development dependencies for all Rails versions here.
   # Rails version-specific dependencies can go in the relevant Gemfile.

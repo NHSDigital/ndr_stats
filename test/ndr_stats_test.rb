@@ -19,8 +19,8 @@ class NdrStatsTest < Minitest::Test
 
       adaptor = NdrStats.adaptor
       assert_kind_of Datadog::Statsd, adaptor
-      assert_equal 'test.host', adaptor.connection.host
-      assert_equal 9125, adaptor.connection.port
+      assert_equal 'test.host', adaptor.respond_to?(:host) ? adaptor.host : adaptor.connection.host
+      assert_equal 9125, adaptor.respond_to?(:port) ? adaptor.port : adaptor.connection.port
       assert_equal %w[system:app stack:live], adaptor.tags
     end
   end
