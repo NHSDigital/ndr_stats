@@ -7,15 +7,15 @@ file safety:
   ".github/workflows/lint.yml":
     comments:
     reviewed_by: brian.shand
-    safe_revision: 382411297cd156548a4d3f090547e6b80cbbbc36
+    safe_revision: 76dfadefbf00c9eaba02c656d4ef794fdbb2fcd3
   ".github/workflows/test.yml":
     comments:
     reviewed_by: brian.shand
-    safe_revision: c8d36a87d3ca23be391c3abbfb9d0cf41e2d762f
+    safe_revision: 7dc01ce1d43706f866b2d25da183aac2b4c1237b
   ".gitignore":
     comments:
     reviewed_by: brian.shand
-    safe_revision: 3bec6bc0889da4949608f717d7ae92be1f3ac186
+    safe_revision: 3d8c8a5cfeafe71d838e19157026f09ec37eacbf
   ".rubocop.yml":
     comments:
     reviewed_by: brian.shand
@@ -23,7 +23,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: brian.shand
-    safe_revision: c8d36a87d3ca23be391c3abbfb9d0cf41e2d762f
+    safe_revision: 7dc01ce1d43706f866b2d25da183aac2b4c1237b
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: josh.pencheon
@@ -36,6 +36,10 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 32cdcdf07cd5d8f9eaf0ee7875cb84bc1992dc5f
+  LICENSE.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 3d8c8a5cfeafe71d838e19157026f09ec37eacbf
   README.md:
     comments:
     reviewed_by: brian.shand
@@ -52,10 +56,6 @@ file safety:
     comments:
     reviewed_by: josh.pencheon
     safe_revision: 43fe7d83291cd9f68a530f615c5b325ea1096366
-  gemfiles/Gemfile.rails70:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 3132d7cd6c6b8bcb893e070f034688168d5a3799
   gemfiles/Gemfile.rails71:
     comments:
     reviewed_by: brian.shand
@@ -90,16 +90,12 @@ file safety:
     safe_revision: f63534ea9c2a0616bc598db4b49805495f3d8581
   lib/ndr_stats/version.rb:
     comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 0be7f37d7b65df4f465133015399f37e316169c2
+    reviewed_by: brian.shand
+    safe_revision: 3d8c8a5cfeafe71d838e19157026f09ec37eacbf
   ndr_stats.gemspec:
     comments:
     reviewed_by: brian.shand
-    safe_revision: 000e592b069807fdbd8e12b48d87ae02f8995aa7
-  test/dummy/.ruby-version:
-    comments:
-    reviewed_by: josh.pencheon
-    safe_revision: 1da1afebc89e581f409615c084d47adfb0b8265f
+    safe_revision: 7dc01ce1d43706f866b2d25da183aac2b4c1237b
   test/dummy/README.md:
     comments:
     reviewed_by: josh.pencheon
@@ -254,8 +250,8 @@ file safety:
     safe_revision: 776d628b2ef8ab972fe43e79851cbe0d863ca449
   test/ndr_stats_test.rb:
     comments:
-    reviewed_by: josh.pencheon
-    safe_revision: f63534ea9c2a0616bc598db4b49805495f3d8581
+    reviewed_by: brian.shand
+    safe_revision: 7dc01ce1d43706f866b2d25da183aac2b4c1237b
   test/railtie_test.rb:
     comments:
     reviewed_by: brian.shand

@@ -1,4 +1,7 @@
 ## [Unreleased]
+* no unreleased changes*
+
+## 0.2.3 / 2025-11-20
 ### Fixed
 * Support Ruby 3.4. Drop support for Rails 7.0, Ruby 3.1
 * Support dogstatsd-ruby 5
